@@ -5,6 +5,7 @@
 #' If lang = "auto" (default), it will be set based on Sys.getlocale("LC_CTYPE")
 #' @return nCov2019 object
 #' @export
+#' @importFrom methods is
 #' @importFrom jsonlite fromJSON
 #' @author Guangchuang Yu
 get_nCov2019 <- function(lang = 'auto') {

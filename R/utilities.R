@@ -59,29 +59,6 @@ extract_province <- function(object, i, by) {
   return(data)  
 }
 
-##' @importFrom ggplot2 scale_fill_gradient
-##' @importFrom RColorBrewer brewer.pal
-fill_scale_continuous <- function(palette = "Reds") {
-    cols = RColorBrewer::brewer.pal(6, palette)
-    breaks = c(1, 10, 100, 1000, 10000)
-    scale_fill_gradient(low=cols[1], high=cols[6],
-                na.value='white', trans='log',
-                breaks=breaks, labels=breaks)
-}
-
-discrete_breaks <- c(1,10,100,500,10^3,10^4, 10^5)
-
-##' @importFrom ggplot2 scale_fill_brewer
-fill_scale_discrete <- function(palette = "Reds") {
-    scale_fill_brewer(palette=palette, name='confirm',
-            na.translate = FALSE,
-            breaks = c('[1,10)', '[10,100)', '[100,500)', 
-                      '[500,1e+03)', '[1e+03,1e+04)', '[1e+04,1e+05]'),
-            labels = c("<10", "10-100", "100-500", "500-1000", 
-                        "1000-10000", ">10000"))
-}
-
-
 which_lang <- function(lang) {
   lang <- match.arg(lang, c("auto","zh", "en"))
   if (lang == "auto") {

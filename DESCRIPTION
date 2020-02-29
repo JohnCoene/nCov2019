@@ -11,29 +11,19 @@ Depends: R (>= 3.6.0)
 Imports: 
     downloader,
     dplyr,
-    ggplot2,
     jsonlite,
     methods,
     tibble,
-    RColorBrewer,
     stats,
-    chinamap,
     forcats,
     forecast,
-    ggrepel,
     lubridate,
     mapproj,
     pinyin,
-    plotly,
-    sf,
-    shiny,
-    shinyBS,
-    sp,
     tidyr,
     curl
 Suggests:
-    utils,
-    maps
+    utils
 remotes:
   GuangchuangYu/chinamap
 License: Artistic-2.0
